@@ -9,7 +9,7 @@ DOMAIN_NAME="priya22n.site"
 for instance in ${INSTANCES[@]}
 do 
    
-  INSTANCE_ID=$(aws ec2 run-instances --image-id ami-09c813fb71547fc4f --instance-type t3.
+  INSTANCE_ID=$(aws ec2 run-instances --image-id ami-09c813fb71547fc4f --instance-type t2.
   micro --security-group-ids sg-01d79933c960fd126 --tag-specification "ResourceType=instance,
   Tags=[{Key=Name, Value=test}]" --query "Instance[0].privateIpAddress" --Output text)
    
