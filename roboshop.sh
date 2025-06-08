@@ -9,9 +9,9 @@ DOMAIN_NAME="priya22n.site"
 for instance in ${INSTANCES[@]}
 do 
    
-  INSTANCE_ID=$(aws ec2 run-instances --image-id ami-09c813fb71547fc4f --instance-type t2.
-  micro --security-group-ids sg-01d79933c960fd126 --tag-specification "ResourceType=instance,
-  Tags=[{Key=Name, Value=$instance}]" --query "Instance[0].privateIpAddress" --Output text)
+  INSTANCE_ID=$(aws ec2 run-instances --image-id ami-09c813fb71547fc4f --instance-type 
+  t2.micro --security-group-ids sg-01d79933c960fd126 --tag-specification "ResourceType=instance,
+  Tags=[{Key=Name, Value=$instance}]" --query "Instances[0].InstanceId" --Output text)
    
   if [ $instance != "frontend"]
   then
