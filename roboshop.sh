@@ -13,7 +13,7 @@ do
   t2.micro --security-group-ids sg-01d79933c960fd126 --tag-specification "ResourceType=instance,
   Tags=[{Key=Name, Value=$instance}]" --query "Instances[0].InstanceId" --Output text)
    
-  if [ $instance != "frontend"]
+  if [ $instance != "frontend" ]
   then
     Ip=$(aws ec2 describe-instance --instance-ids $INSTANCE_ID --query "Reservations[0].
     Instance[0].PrivateIpAddress" --output text)
