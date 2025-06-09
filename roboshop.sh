@@ -1,6 +1,6 @@
 #!/bin/bash
 AMI_ID="ami-09c813fb71547fc4f"
-SG_ID="sg-00ece65952aa54ba4"
+SG_ID="sg-0c704820e242a6aaf"
 INSTANCES=("mongodb" "redis" "mysql" "rabbitmq" "catalogue" "user" "cart" "shipping" "payment" "dispatch" "frontend")
 ZONE_ID="Z09866222OKAR1PLMNXKY"
 DOMAIN_NAME="priya22n.site"
