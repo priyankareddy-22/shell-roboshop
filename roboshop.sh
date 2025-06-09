@@ -6,10 +6,10 @@ ZONE_ID="Z09866222OKAR1PLMNXKY"
 DOMAIN_NAME="priya22n.site"
 
 #for instance in ${INSTANCES[@]}
-for instance in ${INSTANCES[@]}
+for instance in $@
 do 
    
-  INSTANCE_ID=$(aws ec2 run-instances --image-id ami-09c813fb71547fc4f --instance-type t2.micro --security-group-ids sg-0c704820e242a6aaf --tag-specification "ResourceType=instance,Tags=[{Key=Name, Value=$instance}]" --query "Instances[0].InstanceId" --Output text)
+  INSTANCE_ID=$(aws ec2 run-instances --image-id ami-09c813fb71547fc4f --instance-type t2.micro --security-group-ids sg-0c704820e242a6aaf --tag-specification "ResourceType=instance,Tags=[{Key=Name, Value=$instance}]" --query "Instances[0].InstanceId" --output text)
    
   if [ $instance != "frontend" ]
   then
