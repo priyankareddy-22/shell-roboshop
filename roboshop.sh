@@ -1,8 +1,8 @@
 #!/bin/bash
 AMI_ID="ami-09c813fb71547fc4f"
-SG_ID="sg-01d79933c960fd126"
+SG_ID="sg-0db88d6324157e7c5"
 INSTANCES=("mongodb" "redis" "mysql" "rabbitmq" "catalogue" "user" "cart" "shipping" "payment" "dispatch" "frontend")
-ZONE_ID="Z043242732NAEK996K9L7"
+ZONE_ID="Z09866222OKAR1PLMNXKY"
 DOMAIN_NAME="priya22n.site"
 
 #for instance in ${INSTANCES[@]}
