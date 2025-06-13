@@ -1,28 +1,7 @@
-# #!/bin/bash
-# AMI_ID="ami-09c813fb71547fc4f"
-# SG_ID="sg-0a8327ac7bdea48d0"
-# INSTANCES=("mongodb" "redis" "mysql" "rabbitmq" "catalogue" "user" "cart" "shipping" "payment" "dispatch" "frontend")
-# ZONE_ID="Z09866222OKAR1PLMNXKY"
-# DOMAIN_NAME="priya22n.site"
-
-# #for instance in ${INSTANCES[@]}
-# for instance in $@
-# do 
-   
-#   INSTANCE_ID=$(aws ec2 run-instances --image-id ami-09c813fb71547fc4f --instance-type t2.micro --security-group-ids sg-0a8327ac7bdea48d0 --tag-specification "ResourceType=instance,Tags=[{Key=Name, Value=$instance}]" --query "Instances[0].InstanceId" --output text)
-   
-#   if [ $instance != "frontend" ]
-#   then
-#     Ip=$(aws ec2 describe-instances --instance-ids $INSTANCE_ID --query "Reservations[0].Instance[0].PrivateIpAddress" --output text)
-#   else 
-#     Ip=$(aws ec2 describe-instances --instance-ids $INSTANCE_ID --query "Reservations[0].Instance[0].PublicIpAddress" --output text)
-#   fi
-#   echo "$instance Ip address: $IP"
-# done
 #!/bin/bash
 
 AMI_ID="ami-09c813fb71547fc4f"
-SG_ID="sg-0a8327ac7bdea48d0" # replace with your SG ID
+SG_ID="sg-0bd4c431768008a8b" # replace with your SG ID
 INSTANCES=("mongodb" "redis" "mysql" "rabbitmq" "catalogue" "user" "cart" "shipping" "payment" "dispatch" "frontend")
 ZONE_ID="Z09866222OKAR1PLMNXKY" # replace with your ZONE ID
 DOMAIN_NAME="priya22n.site" # replace with your domain
